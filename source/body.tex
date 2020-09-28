@@ -132,7 +132,7 @@ This was one of those questions where I wonder if I’m just dumb, or if it’s 
 % \end{tikzpicture}
 % \end{figure}
 
-
+\newpage
 \begin{figure}[!h]
 \centering
 \begin{tikzpicture}
@@ -150,17 +150,48 @@ This was one of those questions where I wonder if I’m just dumb, or if it’s 
 \end{figure}
 
 Information given:
+
 \begin{itemize}
-    \item FG = 600 m
-    \item $\angle EFH = 1.91^\circ$
-    \item 
+    \item $\overline{FG} = 600  {\displaystyle {\text{m}}}$
+    \item $\measuredangle EFH = 1.91^\circ$
+    \item $\measuredangle EGH = 2.67^\circ$
 \end{itemize}
 
+Solution:
 
+\begin{equation}
+\begin{split}
+\tan(2.67^\circ) &= \frac{\overline{EH}}{x} \\
+x &= \frac{\overline{EH}}{\tan(2.67^\circ)} \\
+\tan(1.91^\circ) &= \frac{\overline{EH}}{600 + x} \\
+(600 + x)(\tan(1.91^\circ)) &= (600 + x)\frac{\overline{EH}}{600 + x} \\
+(600 + x)(\tan(1.91^\circ)) &= \overline{EH} \\
+600 \cdot \tan(1.91^\circ) + x \cdot \tan(1.91^\circ) &= \overline{EH} \\
+600 \cdot \tan(1.91^\circ) &= \overline{EH} - \overline{EH} \frac{\tan(1.91^\circ)}{\tan(2.67^\circ)} \\
+600 \cdot \tan(1.91^\circ) &= \overline{EH}(1 - \frac{\tan(1.91^\circ)}{\tan(2.67^\circ)}) \\
+\frac{600 \cdot \tan(1.91^\circ)}{1 - \frac{\tan(1.91^\circ)}{\tan(2.67^\circ)}} &= \overline{EH} \approx 70
+\end{split}
+\end{equation}
+
+\newpage
+
+During the exam I was stuck on the gap between $G$ and $H$, in hindsight it all makes sense, i.e. just solve for $\overline{GH}$ using an unknown value for $\overline{EH}$, since we can factor this quantity out in the ensuing expression for $\tan(1.91^\circ)$. Although this realization occurred after spending an hour or so on the problem, I suppose failing this question was inevitable.
+
+\answer{$\overline{EH} \approx 70 \; {\displaystyle {\text{m}}} $}
 
     
 
 \section*{Question \#5}
+
+
+% \begin{tikzpicture}
+% \begin{axis}[domain=3/4:5/4,legend pos=outer north east,trig format plots=rad]
+% \addplot {tan(x)};
+% \legend{$\sin(2 \pi x)$,$\cos(2 \pi x)$}
+% \end{axis}
+% \end{tikzpicture}
+
+
 \section*{Question \#6}
 
 
