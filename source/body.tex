@@ -1,0 +1,160 @@
+\section*{Question \#1}
+
+
+\question{Consider the angle $\theta$ in with measure $-495^\circ$.}
+
+The problem with this question is that I was trying to be smart by simplifying $-495^\circ$ to $225^\circ$, so thereafter all of my subsequent work was using an angle co-terminal to $-495^\circ$. In this context, my mistake was equating co-terminal angles as being the same, but this only applies to the output of periodic functions where co-terminal angles \textbf{map to the same value}, but the arguments themselves represent different measures.
+
+\subsection*{Question \#1 (A)}
+
+Using the following relation:
+\begin{equation}
+\begin{split}
+x^{\circ} = \frac{x}{360} \tau \; {\displaystyle {\text{rad}}}
+\end{split}
+\end{equation}
+
+I can express $-495^\circ$ in terms of turns (or $\tau$) like so:
+\begin{equation}
+\begin{split}
+-495^{\circ} &= \frac{-495}{360} \tau \; {\displaystyle {\text{rad}}} \\
+    &= -\frac{11}{8} \tau \; {\displaystyle {\text{rad}}} \\
+    &= - 1\frac{3}{8} \; \tau
+\end{split}
+\end{equation}
+
+Since this angle is expressed in terms of turns, we have a intuitive idea about how the graph the given angle. I.e. because $-\frac{3}{8}$ can be considered a ratio of a circle, which is easy to picture, in the same manner that $\frac{3}{4}$ of a circle is easy to imagine, compared to e.g. $\frac{3}{2}$ half circles.
+
+\newpage
+
+Therefore, I know that this angle makes one full revolution, and $-\frac{3}{8}$ of a revolution (going clockwise), which results in the following figure correctly drawn in the context of a $-495^\circ$ angle:
+
+\begin{figure}[!h]
+\centering
+\begin{tikzpicture}
+\tikzset{>=stealth}
+% draw axises and labels. We store a single coordinate to have the
+% direction of the x axis
+\draw[->] (-4,0) -- ++(8,0) coordinate (X) node[below] {$x$};
+\draw[->] (0,-4) -- ++(0,8) node[left] {$y$};
+
+\newcommand\CircleRadius{3cm}
+\draw (0,0) circle (\CircleRadius);
+% special method of noting the position of a point
+\coordinate (P) at (-495:\CircleRadius);
+
+\draw[thick] 
+(0,0)
+coordinate (O) % store origin
+node[] {} % label
+-- 
+node[below left, pos=1] {$P(-\frac{\sqrt{2}}{2}, -\frac{\sqrt{2}}{2})$} % some labels
+node[below right, midway] {$r$}
+(P) 
+-- 
+node[midway,left] {$y$}
+(P |- O) coordinate (Px) % projection onto horizontal line through
+                            % O, saved for later
+-- 
+node[midway, below] {$x$}
+cycle % closed path
+
+% pic trick is from the angles library, requires the three points of
+% the marked angle to be named
+
+pic [] {angle=X--O--P};
+\draw[->,red] (5mm, 0mm) arc (0:-495:5mm) node[midway,xshift=-4mm,yshift=3.5mm] {$-495^\circ$};
+% right angle marker
+\draw ($(Px)+(0.3, 0)$) -- ++(0, -0.3) -- ++(-0.3,0);
+\end{tikzpicture}
+\end{figure}
+
+\subsection*{Question \#1 (B)}
+
+Using the following relation:
+\begin{equation}
+\begin{split}
+x^{\circ} = \frac{x}{360} (2\pi) \; {\displaystyle {\text{rad}}}
+\end{split}
+\end{equation}
+
+I can \textbf{correctly} express $-495^\circ$ degrees in terms of radians like so:
+\begin{equation}
+\begin{split}
+-495^{\circ} &= \frac{-495}{360} (2\pi) \; {\displaystyle {\text{rad}}} \\
+    &= -\frac{11}{8} (2\pi) \; {\displaystyle {\text{rad}}} \\
+    &= -\frac{11}{4} \pi \; {\displaystyle {\text{rad}}}
+\end{split}
+\end{equation}
+
+\answer{$-\frac{11}{4} \pi \; {\displaystyle {\text{rad}}}$}
+
+
+\subsection*{Question \#1 (C)}
+
+\section*{Question \#3}
+
+This should have been correct, what happens is my brain frequently gets things mixed up, i.e. there was a disconnect between my internal thoughts and what manifested on paper. I know that $\sec(x)$ is the reciprocal of $\cos(x)$, just as $\csc(x)$ is the reciprocal of $\sin(x)$, and that $\cot(x)$ is the reciprocal of $\tan(x)$, and furthermore in the context of the unit circle, that $\sin(\theta)$ represents the y value, and that $\cos(\theta)$ represents the x value. 
+
+Therefore, given the some $P(-20, 21)$ for $\theta$:
+
+\begin{equation}
+\begin{split}
+r &= \sqrt{x^2 + y^2} = 29 \\
+\sin(\theta) &= \frac{y}{r} = \frac{21}{29} \\
+\sec(\theta) &= \frac{r}{x} = \frac{29}{-20} = -\frac{29}{20}
+\end{split}
+\end{equation}
+
+\answer{$\sin(\theta) = \frac{21}{29}$, $\sec(\theta) = -\frac{29}{20}$}
+    
+
+\section*{Question \#4}
+
+This was one of those questions where I wonder if I’m just dumb, or if it’s legitimately a hard problem… Either way something I would have failed at regardless.
+
+
+% \begin{figure}[!h]
+% \centering
+% \begin{tikzpicture}[scale=1.25]
+% \coordinate [label=left:$F$] (A) at (-1.5cm,-1.cm);
+% \coordinate [label=right:$G$] (C) at (1.5cm,-1.0cm);
+% \coordinate [label=above:$E$] (B) at (1.5cm,1.0cm);
+% \draw 
+%     (A) --
+% node[above] {$a$} (B) --
+% node[right] {$c$} (C) -- 
+% node[below] {$b$} (A);
+% \draw
+% (1.25cm,-1.0cm) rectangle (1.5cm,-0.75cm);
+% \tkzMarkAngle[size=1cm,color=cyan,mark=|](C,A,B);
+% \end{tikzpicture}
+% \end{figure}
+
+
+\begin{figure}[!h]
+\centering
+\begin{tikzpicture}
+
+    \coordinate [label=left:$F$] (F) at (0,0);
+
+    \draw (F)--(5,5);
+    \draw (F)--(5,0);
+    \draw (5,0)--(5,5);
+    \draw (5,5)--(2,0);
+
+
+\end{tikzpicture}
+\end{figure}
+    
+
+\section*{Question \#5}
+\section*{Question \#6}
+% \begin{enumerate}
+%     \item[1.]
+%     \begin{enumerate}
+%         \item[(a)] One entry in the list
+%         \item[(b)] Another entry in the list
+%     \end{enumerate}
+%     \item[4.] Another entry in the list
+% \end{enumerate}
