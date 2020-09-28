@@ -11,10 +11,19 @@
 \usepackage{tikz}
 \usepackage{tkz-euclide}
 \usepackage{etoolbox}
-\usetkzobj{all}
+% \usetkzobj{all}
 \usetikzlibrary{angles,patterns,calc}
 \usepackage[most]{tcolorbox}
-\usepackage{pgfplots}
+% \usepackage{pgfplots}
+
+
+
+\usepackage{xurl}
+\usepackage{hyperref}
+\hypersetup{
+    breaklinks=true,
+    colorlinks=true,
+}
 
 
 % BOXES
@@ -52,6 +61,7 @@ colback=red!10!white}
 
 
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % DOCUMENT
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -60,6 +70,7 @@ colback=red!10!white}
 % \begin{abstract}
 %     abstract-text
 %  \end{abstract}
+
  
 
 
@@ -69,5 +80,10 @@ colback=red!10!white}
 
 
 \input{body.tex}
+
+\section*{Miscellaneous}
+\begin{center}
+    Location: \url{https://github.com/colbyn/exam-1-extra-corrections}.
+\end{center}
 
 \end{document}

@@ -109,6 +109,7 @@ r &= \sqrt{x^2 + y^2} = 29 \\
 \answer{$\sin(\theta) = \frac{21}{29}$, $\sec(\theta) = -\frac{29}{20}$}
     
 
+
 \section*{Question \#4}
 
 This was one of those questions where I wonder if I’m just dumb, or if it’s legitimately a hard problem… Either way something I would have failed at regardless.
@@ -136,20 +137,33 @@ This was one of those questions where I wonder if I’m just dumb, or if it’s 
 \centering
 \begin{tikzpicture}
 
-    \coordinate [label=left:$F$] (F) at (0,0);
+    \coordinate [label=below:$F$] (F) at (0,0);
+    \coordinate [label=below:$G$] (G) at (2,0);
+    \coordinate [label=below:$H$] (H) at (5,0);
+    \coordinate [label=above:$E$] (E) at (5,5);
 
-    \draw (F)--(5,5);
-    \draw (F)--(5,0);
-    \draw (5,0)--(5,5);
-    \draw (5,5)--(2,0);
-
-
+    \draw (F)--(E);
+    \draw (F)--(H);
+    \draw (H)--(E);
+    \draw (E)--(G);
 \end{tikzpicture}
 \end{figure}
+
+Information given:
+\begin{itemize}
+    \item FG = 600 m
+    \item $\angle EFH = 1.91^\circ$
+    \item 
+\end{itemize}
+
+
+
     
 
 \section*{Question \#5}
 \section*{Question \#6}
+
+
 % \begin{enumerate}
 %     \item[1.]
 %     \begin{enumerate}
