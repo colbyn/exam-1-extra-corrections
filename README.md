@@ -1,4 +1,4 @@
-# Notes for Stewart Calculus (8th edition)
+# Notes
 
 ![Preview](assets/preview.png)
 
